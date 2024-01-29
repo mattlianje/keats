@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keats v1.0</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="data.js"></script> 
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #sidebar { float: left; width: 20%; padding: 10px; }
+        #content { float: right; width: 75%; }
+        #tabs { margin-top: 20px; }
+        .tab { display: none; }
+        .tab.active { display: block; }
+        #dataTable, #dataPlot { margin-top: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+<h2>Data Viewer</h2>
+
+<div id="sidebar">
+    <input type="file" id="fileInput">
+    <button onclick="loadData()">Load Data</button>
+    <!-- Placeholder for future sliders -->
+</div>
+
+<div id="content">
+    <div id="tabs">
+        <button onclick="showTab('dataTable')">Data Table</button>
+        <button onclick="showTab('dataPlot')">Plot</button>
+    </div>
+    <div id="dataTable" class="tab"></div>
+    <div id="dataPlot" class="tab"></div>
+</div>
+
+</body>
+</html>
+
